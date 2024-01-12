@@ -1,0 +1,174 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+html{
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(210, 46%, 95%);
+}
+
+h2{
+  font-weight: 600;
+}
+
+h3{
+  font-weight: 500;
+  font-size: .8rem;
+  opacity: 50%;
+}
+
+blockquote{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p{
+  font-weight: 500;
+  opacity: 70%;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: min(80vw, 75vw);
+  margin: 5rem auto;
+  gap: 2rem;
+  
+}
+
+.card{
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grad-info{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2.6rem 5fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.grad-info>img{
+  border-radius: 50%;
+  grid-row: span 2;
+  width: 2.5rem;
+}
+
+.user1{
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-position: top right 2rem;
+  background-repeat: no-repeat;
+}
+
+.user1>.grad-info>img{
+  border: .2rem hsla(0, 0%, 100%, 50%) solid;
+}
+
+.user2{
+  color:hsl(0, 0%, 81%);
+  background-color: hsl(217, 19%, 35%);
+}
+
+.user2>.grad-info>img{
+  border: .2rem hsla(0, 0%, 81%, 50%) solid;
+}
+
+.user3, .user5{
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.user3>.grad-info>img, .user5>.grad-info>img{
+  border: .2rem hsla(217, 19%, 35%, 50%) solid;
+}
+
+.user4{
+  color: hsl(0, 0%, 81%);
+  background-color: hsl(219, 29%, 14%);
+}
+
+.user4>.grad-info>img{
+  border: .2rem hsla(0, 0%, 81%, 50%) solid;
+}
+
+@media (min-width: 1140px) {
+  .container{
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+  }
+
+  .user1{
+    grid-column: span 2;
+    order: 1;
+  }
+
+  .user2{
+    order: 2;
+  }
+  
+  .user3{
+    order: 4;
+  }
+
+  .user4{
+    grid-column: span 2;
+    order: 5;
+  }
+
+  .user5{
+    order: 3;
+    grid-row: span 2;
+  }
+
+}
+
+@media (min-width: 680px) and (max-width:1140px) {
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .user1{
+    grid-column: span 2;
+    order: 1;
+  }
+
+  .user2{
+    order: 2;
+  }
+  
+  .user3{
+    order: 4;
+  }
+
+  .user4{
+    grid-column: span 2;
+    order: 5;
+  }
+
+  .user5{
+    order: 3;
+    grid-row: span 2;
+  }
+
+}
